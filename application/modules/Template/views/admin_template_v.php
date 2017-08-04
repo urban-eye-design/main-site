@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>UrbanEYE Design::<!-- <?php echo $title; ?> --></title>
+  <title>UrbanEYE Design::</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -23,6 +23,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect.
   -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/skins/skin-black.min.css">
+
+  <?php
+foreach($crud->css_files as $file): ?>
+    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+
+<?php endforeach; ?>
+<?php foreach($crud->js_files as $file): ?>
+
+    <script src="<?php echo $file; ?>"></script>
+<?php endforeach; ?>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -290,8 +300,8 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        <?php echo $page_header ?>
+        <small><?php echo $page_description ?></small>
       </h1>
       <!-- <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -302,7 +312,7 @@ desired effect
     <!-- Main content -->
     <section class="content">
 
-      <!-- Your Page Content Here -->
+      <?php $this->load->view($content_view); ?>
 
     </section>
     <!-- /.content -->
@@ -407,9 +417,9 @@ desired effect
 <!-- Bootstrap WYSIHTML5 -->
 <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
-<script src="<?php echo base_url(); ?>plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="<?php echo base_url(); ?>plugins/fastclick/fastclick.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url(); ?>assets/dist/js/app.min.js"></script>
 </body>
