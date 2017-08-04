@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'urbaneye',
-	'password' => 'design',
-	'database' => 'urbaneye',
+	'hostname' => 'db680989313.db.1and1.com',
+	'username' => 'dbo680989313',
+	'password' => '4theGod$',
+	'database' => 'db680989313',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
