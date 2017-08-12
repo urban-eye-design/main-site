@@ -9,4 +9,9 @@ class Template extends MY_Controller
 	{
 		$this->load->view('admin_template_v', $data);
 	}
+	
+	function call_main_template($data = NULL)
+	{
+		$this->load->view('main_t/template_v', $data);
+	}
 }

@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://www.urban-eye-design.com/';
+$config['base_url'] = 'http://dev.urban-eye-design.com/';
 
 /*
 |--------------------------------------------------------------------------
