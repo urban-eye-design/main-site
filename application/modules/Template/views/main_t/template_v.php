@@ -35,6 +35,24 @@
         margin-top: -10px;
     }
 		}
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.business-header {
+    height: 8vh;
+    background: url('http://placehold.it/1920x150') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.card {
+    height: 100%;
+}
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,7 +71,7 @@
 
     <!-- Page Content -->
     <div class="container">
-		<?php $this->load->view($main_content); ?>
+		<?php $this->load->view($content_view); ?>
     </div>
     <!-- /.container -->
 
